@@ -56,6 +56,9 @@ song_select = ("""SELECT songs.song_id, artists.artist_id
                FROM artists 
                JOIN songs  
                ON artists.artist_id = songs.artist_id
+               WHERE  s.title = %s
+               AND a.name = %s
+               AND s.duration = %s
 """)
 
 # QUERY LISTS
